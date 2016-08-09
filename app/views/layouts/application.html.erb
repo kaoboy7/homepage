@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://use.fontawesome.com/230bbf9959.js"></script>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="logo">
+    Alexanderkao
+  </div>
+
+  <nav>
+    <%= link_to "About", home_index_path %>
+    <%= link_to "Blog", blog_index_path %>
+  </nav>
+
+  <%= yield %>
+
+  <div class="background">
+    <%= image_tag 'calvinandhobbes.jpg' %>
+  </div>
+
+  <div class="footer">
+    <div class="footer__left">
+    <a href="https://github.com/kaoboy7/"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="footer__right">
+      Copyright 2016 Alexander Kao
+    </div>
+  </div>
+
+</body>
+</html>
